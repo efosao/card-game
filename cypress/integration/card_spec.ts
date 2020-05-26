@@ -1,10 +1,12 @@
 import get from "lodash/get";
-import { CardDeck, Suites } from "../../src/index";
+import { CardDeck, DeckColor, Suites } from "../../src/index";
 import { Suite } from "mocha";
 
 describe("Card Deck", () => {
   const deck = new CardDeck();
   const { cards } = deck;
+
+  // check counts
   it("New deck constains 52 cards", () => {
     for (let c in cards) {
       cy.log(JSON.stringify(cards[c]));
@@ -24,5 +26,15 @@ describe("Card Deck", () => {
   });
   it("It has 13 Spades", () => {
     expect(cards.filter((c) => c.suite === Suites.Spades).length).to.equal(13);
+  });
+
+  // check colors
+  it("It defaults to black colored cards", () => {
+    expect(deck.color).to.equal(DeckColor.Black);
+  });
+
+  const redDeck = new CardDeck(DeckColor.Red);
+  it("It has a red colored cards", () => {
+    expect(redDeck.color).to.equal(DeckColor.Red);
   });
 });
