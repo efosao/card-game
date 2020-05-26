@@ -1,0 +1,19 @@
+{
+  "name": "card-game",
+  "version": "1.0.0",
+  "description": "A card game for Zencastr",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/efosao/card-game.git"
+  },
+  "author": "Efosa Oyegun",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/efosao/card-game/issues"
+  },
+  "homepage": "https://github.com/efosao/card-game#readme"
+}
