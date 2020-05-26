@@ -27,8 +27,8 @@ export class Card {
   }
 }
 
-enum Suites {
-  "clubs" = "Clubs",
+export enum Suites {
+  "Clubs" = "Clubs",
   "Diamonds" = "Diamonds",
   "Hearts" = "Hearts",
   "Spades" = "Spades",
