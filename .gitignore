@@ -2,3 +2,4 @@ node_modules
 
 # build aritifacts
 .next
+cypress/videos
