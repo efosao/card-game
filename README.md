@@ -12,3 +12,18 @@
   - 52 card
   - 4 suits -> Clubs, Diamonds, Hearts, Spades
   - Ace -> 10, Jack, Queen, King
+
+### Class Definitions
+
+#### Deck Class
+
+- Properties
+  - id (auto)
+  - name (string, opt)
+  - color (string, opt)
+  - Cards[] - 52
+- Methods to implement
+  - Constructor - ({ color: optional, name: optional })
+  - Swap (a, b) - swaps any two cards
+  - Shuffle () - shuffles deck
+  - Reset () - reinitializes card deck
