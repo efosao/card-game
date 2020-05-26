@@ -27,3 +27,9 @@
   - Swap (a, b) - swaps any two cards
   - Shuffle () - shuffles deck
   - Reset () - reinitializes card deck
+
+#### Card Class
+
+- Props
+  - value [1 - 10, j, q, k]
+  - suite [c, d, h, s]
