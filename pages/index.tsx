@@ -12,7 +12,7 @@ function HomePage() {
   const [matchedCards, setMatchedCards] = useState([]);
 
   function startGame() {
-    const g = new Game();
+    const g = new Game(4);
     g.deal();
     g.shuffle();
     setGame(g);

@@ -3,8 +3,10 @@ import { Card, CardDeck, DeckColors } from ".";
 class Game {
   deck: CardDeck;
   dealtCards: { id: number; card: Card }[];
+  pairSize: number;
 
-  constructor() {
+  constructor(pairSize: number = 3) {
+    this.pairSize = pairSize;
     this.dealtCards = [];
     this.deck = new CardDeck(DeckColors.Purple);
     this.deck.shuffle();
@@ -16,7 +18,7 @@ class Game {
       const card = this.deck.cards[c];
       this.dealtCards.push({ id: count++, card });
       this.dealtCards.push({ id: count++, card });
-      if (Number(c) === 7) break;
+      if (this.dealtCards.length / 2 === this.pairSize) break;
     }
   }
 
