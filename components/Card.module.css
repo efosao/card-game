@@ -1,8 +1,19 @@
 .card {
-  background-color: red;
+  border: 5px solid transparent;
   border-radius: 5px;
-  margin: 10px;
+  box-shadow: #aaa 4px 4px 4px;
+  cursor: pointer;
+  height: 150px;
+  margin: 5px;
   padding: 20px;
-  height: 300px;
-  width: 200px;
+  width: 100px;
+}
+
+.card.black {
+  background-color: #666;
+}
+
+.card.purple {
+  background-color: rgb(235, 109, 247);
+}
 }
