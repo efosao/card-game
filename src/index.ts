@@ -17,6 +17,15 @@ export class CardDeck {
     }
     this.cards = cards;
   }
+
+  public shuffle() {
+    const cards = [...this.cards];
+    for (let i = cards.length - 1; i > 0; i -= 1) {
+      let j = Math.floor(Math.random() * (i + 1));
+      [cards[i], cards[j]] = [cards[j], cards[i]];
+    }
+    this.cards = cards;
+  }
 }
 
 export class Card {
@@ -42,9 +51,3 @@ export enum Suites {
   "Hearts" = "Hearts",
   "Spades" = "Spades",
 }
-
-function main() {
-  console.log("hello from main");
-}
-
-export default main;
