@@ -12,7 +12,7 @@ function HomePage() {
   const [matchedCards, setMatchedCards] = useState([]);
 
   function startGame() {
-    const g = new Game(4);
+    const g = new Game(5);
     g.deal();
     g.shuffle();
     setGame(g);
@@ -75,7 +75,9 @@ function HomePage() {
     <div>
       <button onClick={startGame}>{isGameStarted ? "Restart" : "Start"}</button>
       <div>
-        <h2>Match Pairs{gameWon ? " - You Won" : ""}</h2>
+        <h2>
+          Match <u>All</u> Card Pairs{gameWon ? " - You Won!" : ""}
+        </h2>
       </div>
       <div className={styles.container}>{cards}</div>
     </div>
