@@ -6,7 +6,7 @@ import styles from "./index.module.css";
 import { includes } from "lodash";
 
 function HomePage() {
-  const [gameStarted, setGameStarted] = useState(false);
+  const [isGameStarted, setIsGameStarted] = useState(false);
   const [game, setGame] = useState(null);
   const [selectedCards, setSelectedCards] = useState([]);
   const [matchedCards, setMatchedCards] = useState([]);
@@ -16,7 +16,7 @@ function HomePage() {
     g.deal();
     g.shuffle();
     setGame(g);
-    setGameStarted(true);
+    setIsGameStarted(true);
     setMatchedCards([]);
     setSelectedCards([]);
   }
@@ -28,10 +28,10 @@ function HomePage() {
   }
 
   useEffect(() => {
-    if (gameStarted) {
+    if (isGameStarted) {
       console.log("game has started ...");
     }
-  }, [gameStarted]);
+  }, [isGameStarted]);
 
   useEffect(() => {
     console.log("handle selected cards...");
@@ -69,10 +69,14 @@ function HomePage() {
     });
   }
 
+  const gameWon = matchedCards.length === cards.length && cards.length !== 0;
+
   return (
     <div>
-      <button onClick={startGame}>Start</button>
-      <div>Selected Cards: {JSON.stringify(selectedCards)}</div>
+      <button onClick={startGame}>{isGameStarted ? "Restart" : "Start"}</button>
+      <div>
+        <h2>Match Pairs{gameWon ? " - You Won" : ""}</h2>
+      </div>
       <div className={styles.container}>{cards}</div>
     </div>
   );
