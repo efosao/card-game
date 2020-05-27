@@ -13,8 +13,16 @@
   background-color: #666;
 }
 
+.card.blue {
+  background-color: rgb(107, 92, 241);
+}
+
 .card.purple {
   background-color: rgb(235, 109, 247);
+}
+
+.card.red {
+  background-color: red;
 }
 
 .card.selected {
