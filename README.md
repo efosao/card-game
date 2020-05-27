@@ -5,13 +5,23 @@
 - Please make sure there is a valid package.json file in the root of the repo
 - Upload this homework to a github repository or a github gist
 
+## Instructions
+
+- install pkgs
+  - `npm install`
+- run app
+  - `npm run dev`
+- open browser location to view app
+  - `http://localhost:3000`
+
 ## Todo
 
-- Create `CardDeck` and `Card` Classes.
-- Deck
-  - 52 card
-  - 4 suits -> Clubs, Diamonds, Hearts, Spades
-  - Ace -> 10, Jack, Queen, King
+- ~~Create `CardDeck` and `Card` Classes.~~
+- ~~Deck~~
+  - ~~52 card~~
+  - ~~4 suits -> Clubs, Diamonds, Hearts, Spades~~
+  - ~~Ace -> 10, Jack, Queen, King~~
+  - ~~Implement game~~
 
 ### Class Definitions
 
@@ -24,9 +34,7 @@
   - Cards[] - 52
 - Methods to implement
   - Constructor - ({ color: optional, name: optional })
-  - Swap (a, b) - swaps any two cards
   - Shuffle () - shuffles deck
-  - Reset () - reinitializes card deck
 
 #### Card Class
 

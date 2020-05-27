@@ -8,6 +8,7 @@
     "test:open": "cypress open",
     "dev": "next",
     "build": "next build",
+    "prestart": "next build",
     "start": "next start"
   },
   "repository": {
