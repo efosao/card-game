@@ -73,7 +73,9 @@ function HomePage() {
 
   return (
     <div>
-      <button onClick={startGame}>{isGameStarted ? "Restart" : "Start"}</button>
+      <button onClick={startGame}>
+        {isGameStarted ? "Restart" : "Start"} Game
+      </button>
       <div>
         <h2>
           Match <u>All</u> Card Pairs{gameWon ? " - You Won!" : ""}
