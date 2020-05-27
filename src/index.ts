@@ -1,9 +1,9 @@
 export class CardDeck {
   cards: Card[];
-  color: DeckColor;
+  color: DeckColors;
 
-  constructor(color?: DeckColor) {
-    this.color = color || DeckColor.Black;
+  constructor(color?: DeckColors) {
+    this.color = color || DeckColors.Black;
     this.init();
   }
 
@@ -29,11 +29,11 @@ export class Card {
   }
 }
 
-export enum DeckColor {
-  Black,
-  Blue,
-  Purple,
-  Red,
+export enum DeckColors {
+  "Black" = "Black",
+  "Blue" = "Blue",
+  "Purple" = "Purple",
+  "Red" = "Red",
 }
 
 export enum Suites {

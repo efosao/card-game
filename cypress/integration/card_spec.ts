@@ -1,5 +1,5 @@
 import get from "lodash/get";
-import { CardDeck, DeckColor, Suites } from "../../src/index";
+import { CardDeck, DeckColors, Suites } from "../../src/index";
 import { Suite } from "mocha";
 
 describe("Card Deck", () => {
@@ -30,11 +30,11 @@ describe("Card Deck", () => {
 
   // check colors
   it("It defaults to black colored cards", () => {
-    expect(deck.color).to.equal(DeckColor.Black);
+    expect(deck.color).to.equal(DeckColors.Black);
   });
 
-  const redDeck = new CardDeck(DeckColor.Red);
+  const redDeck = new CardDeck(DeckColors.Red);
   it("It has a red colored cards", () => {
-    expect(redDeck.color).to.equal(DeckColor.Red);
+    expect(redDeck.color).to.equal(DeckColors.Red);
   });
 });
